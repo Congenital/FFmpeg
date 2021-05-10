@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# sudo apt-get install gcc-arm-linux-gnueabihf
+
+make clean
+
+./configure --disable-static --enable-shared --enable-cross-compile --arch=arm --target-os=linux --cross-prefix=arm-linux-gnueabihf- --cc=arm-linux-gnueabihf-gcc --enable-pthreads --prefix=./build/arm
+
+make -j8
+
+make install

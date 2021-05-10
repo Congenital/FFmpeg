@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# sudo apt install gcc-aarch64-linux-gnu
+
+make clean
+
+./configure --disable-static --enable-shared --enable-cross-compile --arch=arm64 --target-os=linux --cross-prefix=aarch64-linux-gnu- --cc=aarch64-linux-gnu-gcc --enable-pthreads --prefix=./build/arm64
+
+make -j8
+
+make install
