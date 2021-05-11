@@ -1,0 +1,9 @@
+#!/bin/bash
+
+make clean
+
+./configure --disable-static --enable-shared --enable-cross-compile --target-os=linux --enable-pthreads --prefix=./build/local
+
+make -j8
+
+make install
